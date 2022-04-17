@@ -1,10 +1,12 @@
 package com.bibik.university.mmi.math;
 
 import com.bibik.university.mmi.math.exception.VectorException;
+import com.bibik.university.mmi.math.vector.BaseBooleanVector;
+import com.bibik.university.mmi.math.vector.BooleanVector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class BaseBooleanVectorTest {
+class BaseBooleanVectorFactoryTest {
 
     @Test
     void vectorInitialization() {

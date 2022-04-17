@@ -1,4 +1,4 @@
-package com.bibik.university.mmi.math;
+package com.bibik.university.mmi.math.vector;
 
 import com.bibik.university.mmi.math.exception.VectorException;
 
