@@ -6,7 +6,7 @@ import com.bibik.university.mmi.math.vector.BooleanVector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class BaseBooleanVectorFactoryTest {
+class BaseBooleanVectorTest {
 
     @Test
     void vectorInitialization() {
@@ -37,6 +37,13 @@ class BaseBooleanVectorFactoryTest {
     void shouldReturnSameHashcode() {
         final long expected = BaseBooleanVector.of(true, false).hashCode();
         final long actual = BaseBooleanVector.of(true, false).hashCode();
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    void shouldUpdateValueByIndex() {
+        final BooleanVector expected = BaseBooleanVector.of(false, false, true, false);
+        final BooleanVector actual = BaseBooleanVector.of(false, false, false, false).set(2, true);
         Assertions.assertEquals(actual, expected);
     }
 }
