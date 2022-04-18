@@ -9,4 +9,6 @@ public interface BooleanVector {
     int getSize();
 
     boolean get(int index);
+
+    BooleanVector set(int index, boolean value);
 }
