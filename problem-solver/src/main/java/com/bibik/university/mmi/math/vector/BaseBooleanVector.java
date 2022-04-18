@@ -4,6 +4,8 @@ import com.bibik.university.mmi.math.exception.VectorException;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import java.util.Arrays;
+
 public class BaseBooleanVector implements BooleanVector {
 
     private final boolean[] array;
@@ -30,6 +32,13 @@ public class BaseBooleanVector implements BooleanVector {
     @Override
     public boolean get(int index) {
         return this.array[index];
+    }
+
+    @Override
+    public BooleanVector set(int index, boolean value) {
+        boolean[] booleans = Arrays.copyOf(this.array, this.array.length);
+        booleans[index] = value;
+        return of(booleans);
     }
 
     @Override
